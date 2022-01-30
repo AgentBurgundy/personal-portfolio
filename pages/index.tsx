@@ -12,15 +12,13 @@ export default function Home() {
   const firstPageToVisit = Math.floor(Math.random() * (2 - 1 + 1)) + 1
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <Head>
-          <title>Personal Portfolio</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <Head>
+        <title>Personal Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        {firstPageToVisit === 1 && <Discord />}
-        {firstPageToVisit === 2 && <Facebook />}
-      </div>
+      {firstPageToVisit === 1 && <Discord />}
+      {firstPageToVisit === 2 && <Facebook />}
     </>
   )
 }
