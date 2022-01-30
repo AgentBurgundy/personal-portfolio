@@ -17,7 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {firstPageToVisit === 1 && <Discord />}
+      {firstPageToVisit === 1 && (
+        <div className="flex min-h-screen flex-col items-center justify-center">
+          <Discord />
+        </div>
+      )}
       {firstPageToVisit === 2 && <Facebook />}
     </>
   )
