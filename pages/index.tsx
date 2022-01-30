@@ -7,6 +7,15 @@ import Head from 'next/head'
 // I could copy discord,
 
 export default function Home() {
+  const firstPageToVisit = Math.floor(Math.random() * (2 - 1 + 1)) + 1
+
+  if (firstPageToVisit === 1) {
+    location.href =
+      'https://personal-portfolio-agentburgundy.vercel.app/facebook'
+  } else {
+    location.href =
+      'https://personal-portfolio-agentburgundy.vercel.app/discord'
+  }
   return (
     <>
       <div className="flex min-h-screen flex-col items-center justify-center">
