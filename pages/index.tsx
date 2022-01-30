@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Discord from '../components/discord/Discord'
+import Facebook from '../components/facebook/Facebook'
 
 // Cool idea, what if I copied a bunch of
 // big website UI's for my portfolio
@@ -8,14 +10,6 @@ import Head from 'next/head'
 
 export default function Home() {
   const firstPageToVisit = Math.floor(Math.random() * (2 - 1 + 1)) + 1
-
-  if (firstPageToVisit === 1) {
-    location.href =
-      'https://personal-portfolio-agentburgundy.vercel.app/facebook'
-  } else {
-    location.href =
-      'https://personal-portfolio-agentburgundy.vercel.app/discord'
-  }
   return (
     <>
       <div className="flex min-h-screen flex-col items-center justify-center">
@@ -23,6 +17,9 @@ export default function Home() {
           <title>Personal Portfolio</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+
+        {firstPageToVisit === 1 && <Discord />}
+        {firstPageToVisit === 2 && <Facebook />}
       </div>
     </>
   )
